@@ -1,6 +1,9 @@
-[package]
-name = "bootcamp"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = [
+    "beginner/*",
+    "intermediate/*",
+    "advanced/*"
+]
 
-[dependencies]
+# This is a workspace root, not a package
+# Each project will have its own Cargo.toml in its directory
