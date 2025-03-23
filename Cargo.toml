@@ -1,8 +1,7 @@
 [workspace]
 members = [
     "beginner/*",
-    "intermediate/*",
-    "advanced/*"
+
 ]
 
 # This is a workspace root, not a package
