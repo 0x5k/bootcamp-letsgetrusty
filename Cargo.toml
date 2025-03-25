@@ -1,8 +1,8 @@
 [workspace]
-members = [
-    "beginner/*",
+members = ["beginner/*"]
 
-]
+# Add this to specify resolver version 3 (recommended for edition 2024)
+resolver = "3"
 
 # This is a workspace root, not a package
 # Each project will have its own Cargo.toml in its directory

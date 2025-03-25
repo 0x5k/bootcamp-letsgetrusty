@@ -49,8 +49,16 @@ fn main() {
 
     let unit = ();
 
-    // Type aliasing
+    // Type aliases (type synonyms) are a way to give an existing type a new name.
+    // They are useful for making code more readable or for simplifying complex types.
+    // Type aliases are declared using the type keyword. Also, type aliases are not new types, they are just aliases for existing types.
+    // Type aliases are declared in the global scope.
     type Age = u8;
 
     let a1: Age = 57;
+
+    // Type aliases can be used to simplify complex types.
+    type Point = (i32, i32);
+
+    let p1: Point = (1, 2);
 }
