@@ -47,6 +47,10 @@ fn main() {
     // s8 now holds "testok ok"
     // println!("{}", s6); // Compile error
     println!("{}", s7); // This is okay, s7 was only borrowed
+
+    let s9 = "🦀 ❤️ 💪";
+    let s10 = &s9[0..4]; // this will prints first 4 bytes of the string
+    println!("{}", s10);
 }
 
 // Helper function (if you were using it, not present in original code)
