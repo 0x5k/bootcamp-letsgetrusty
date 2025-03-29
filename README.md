@@ -14,13 +14,13 @@ The bootcamp is divided into three main learning phases:
 - Rust Fundamentals
   - Variables and data types
   - Functions and control flow
-  - Basic error handling
   - Constants & static variables
 - Memory Management Basics
   - Ownership concepts
   - Borrowing rules
-  - String types (str, &str, and String)
   - Slices
+  - Bonus Masterclass: Rust-Based CS, Strings in Rust
+  - String types (str, &str, and String)
 - Custom Data Types
   - Structs and implementation blocks
   - Enums and pattern matching
@@ -168,4 +168,4 @@ git checkout -b feature-name
 
 ---
 
-*This is a living document that will be updated throughout the bootcamp journey.* 
+*This is a living document that will be updated throughout the bootcamp journey.*
