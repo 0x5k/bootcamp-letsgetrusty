@@ -8,6 +8,7 @@ fn main() {
 
 fn add_to_str(mut p1: String) -> String {
     p1.push_str("is awesome!");
+    // (*p1).push_str(" is awesome!") - automatically dereferences the pointer
     p1
 }
 
