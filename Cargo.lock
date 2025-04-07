@@ -31,5 +31,9 @@ name = "structs"
 version = "0.1.0"
 
 [[package]]
+name = "tuple_structs"
+version = "0.1.0"
+
+[[package]]
 name = "variables"
 version = "0.1.0"

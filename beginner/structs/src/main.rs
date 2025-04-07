@@ -39,7 +39,9 @@ fn main() {
     let sales_tax = book.calculate_sale_tax();
     println!("tax is {}", sales_tax);
     book.set_price(13333.7);
+    let new_tax = book.calculate_sale_tax();
     println!("hacked price: {}", book.price);
+    println!("new tax is {}", new_tax);
     let order_number = book.buy();
     println!("Order number: {}", order_number);
     // book.set_price(13333.7); - error because book is dropped and should not be used again
