@@ -1,7 +1,15 @@
 struct Product {
     name: String,
+    category: ProductCategory,
     price: f32,
     in_stock: bool,
+}
+
+// enum for product category, used as a type for the category field in the Product struct
+enum ProductCategory {
+    Books,
+    Clothing,
+    Electronics,
 }
 
 impl Product {
@@ -9,6 +17,7 @@ impl Product {
     fn new(name: String, price: f32) -> Product {
         Product {
             name: name,
+            category: ProductCategory::Books,
             price: price,
             in_stock: true,
         }
@@ -45,6 +54,17 @@ fn main() {
     let order_number = book.buy();
     println!("Order number: {}", order_number);
     // book.set_price(13333.7); - error because book is dropped and should not be used again
+
+    // enum initialization
+    let category = ProductCategory::Electronics;
+    let product = Product {
+        name: String::from("TV"),
+        category,
+        price: 111.0,
+        in_stock: true,
+    };
+    println!("{} is in stock: {}", product.name, product.in_stock);
+    println!("{} price: {}", product.name, product.price);
 }
 
 // constructor pattern
