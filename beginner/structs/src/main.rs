@@ -5,7 +5,7 @@ struct Product {
 }
 
 impl Product {
-    // Constructor with default values
+    // Constructor with default values, associated function
     fn new(name: String, price: f32) -> Product {
         Product {
             name: name,
@@ -13,16 +13,19 @@ impl Product {
             in_stock: true,
         }
     }
-    // Static methods
+    // Static methods, not associated with any instance
     fn default_tax() -> f32 {
         0.1
     }
+    // mutable borrow self, associated function
     fn set_price(&mut self, price: f32) {
         self.price = price;
     }
+    // immutable borrow self, associated function
     fn calculate_sale_tax(&self) -> f32 {
         self.price * Product::default_tax()
     }
+    // own form of self, associated function
     fn buy(self) -> i32 {
         let name = self.name;
         println!("{name} was bougth!");
@@ -30,14 +33,16 @@ impl Product {
     }
 }
 fn main() {
-    let mut book: Product = Product::new(String::from("rust book"), 1337.0);
+    let mut book = Product::new(String::from("rust book"), 1337.0);
     println!("normal price: {}", book.price);
+    println!("{} is in stock: {}", book.name, book.in_stock);
     let sales_tax = book.calculate_sale_tax();
     println!("tax is {}", sales_tax);
     book.set_price(13333.7);
     println!("hacked price: {}", book.price);
     let order_number = book.buy();
     println!("Order number: {}", order_number);
+    // book.set_price(13333.7); - error because book is dropped and should not be used again
 }
 
 // constructor pattern
