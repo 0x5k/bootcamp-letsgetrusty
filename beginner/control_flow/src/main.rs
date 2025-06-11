@@ -1,18 +1,59 @@
 fn main() {
-    'outer: for x in 1..=3 {
-        println!("x: {x}");
+    let proceed = true;
+    if proceed {
+        println!("Proceeding");
+    } else {
+        println!("Not proceeding");
+    }
 
-        'inner: for y in 1..=3 {
-            if y == 2 {
-                continue 'inner; // Skips the rest of the inner loop's current iteration
-            }
-            if x == 3 && y == 3 {
-                continue 'outer; // Skips to the next iteration of the outer loop
-            }
-            println!("  y: {y}");
+    let age = 16;
+    let gender = "male"; // Could be "male" or "female"
+
+    if age < 3 {
+        println!("child");
+    } else if age < 17 {
+        println!("teenager");
+        // Nested if-else for gender-specific messages
+        if gender == "male" {
+            println!("Young man");
+        } else if gender == "female" {
+            println!("Young lady");
+        }
+    } else {
+        println!("adult");
+        // Nested if-else for gender-specific messages
+        if gender == "male" {
+            println!("Gentleman");
+        } else if gender == "female" {
+            println!("Lady");
         }
     }
+
+    let height = 190;
+    if height < 180 {
+        println!("Tall");
+    } else if height > 170 {
+        println!("Average");
+    } else {
+        println!("Short");
+    }
 }
+
+// fn main() {
+//     'outer: for x in 1..=3 {
+//         println!("x: {x}");
+
+//         'inner: for y in 1..=3 {
+//             if y == 2 {
+//                 continue 'inner; // Skips the rest of the inner loop's current iteration
+//             }
+//             if x == 3 && y == 3 {
+//                 continue 'outer; // Skips to the next iteration of the outer loop
+//             }
+//             println!("  y: {y}");
+//         }
+//     }
+// }
 
 // fn main() {
 //     let correct_password = "rust123";
