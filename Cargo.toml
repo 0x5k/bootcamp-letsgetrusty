@@ -1,5 +1,5 @@
 [workspace]
-members = ["beginner/*"]
+members = ["beginner/*", "experiments/debug_macro"]
 
 # Add this to specify resolver version 3 (recommended for edition 2024)
 resolver = "3"
