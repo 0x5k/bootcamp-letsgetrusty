@@ -1,5 +1,5 @@
 fn main() {
-    /* ------- scalar types ------- */
+    /* ------- scalar types represent a single value ------- */
 
     // boolean
     let b1: bool = true;
@@ -42,7 +42,7 @@ fn main() {
     let s3: String = "hello".to_string();
     let s4: &'static str = "hello";
 
-    /* ------- compound types ------- */
+    /* ------- compound types group multiple values into one type ------- */
 
     // arrays
     let a1 = [1, 2, 3, 4, 5]; // multi
